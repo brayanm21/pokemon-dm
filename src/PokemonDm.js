@@ -10,7 +10,7 @@ export class PokemonDm extends LitElement {
         }else{return false }
     } catch (error) {
     }};
-
+// Traer los datos desde evolution chain para buscar cada pokemon por su nombnre
   async evolutionPokemon (){
     const url = 'https://pokeapi.co/api/v2/evolution-chain?limit=10';//541
     const urlEvolution = await this.dataUrl(url);
@@ -33,11 +33,10 @@ export class PokemonDm extends LitElement {
       });
       }else{continue;}  
     }
-    console.log(datosPokemon);
     return datosPokemon;
-    //this.comprobador = true;
   }
   
+// por nombre traer los datos de las evoluciones de cada pokemon
   async evolutionPokemonId (id){
    const evolutionId = await this.dataUrl('https://pokeapi.co/api/v2/evolution-chain/'+ id);
       const evolutionsData = [];
