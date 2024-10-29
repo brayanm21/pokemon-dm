@@ -1,3 +1,3 @@
 import { PokemonDm } from './src/PokemonDm.js';
 
-customElements.define(PokemonDm.is, PokemonDm);
+customElements.define('pokemon-dm', PokemonDm);
